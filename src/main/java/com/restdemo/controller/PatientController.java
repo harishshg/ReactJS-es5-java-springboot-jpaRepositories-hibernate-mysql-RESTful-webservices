@@ -26,6 +26,8 @@ public class PatientController {
 	@RequestMapping(value="/patient",method=RequestMethod.POST)
 	public Patient savePatient(@RequestBody Patient p){
 		
+		
+		//service call
 		return patientService.save(p);
 	}
 
