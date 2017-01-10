@@ -19,6 +19,7 @@ public class PatientController {
 	@RequestMapping(value="/patient/{id}",method=RequestMethod.GET)
 	public Patient getPatient(@PathVariable long id){
 		
+		System.out.println("demo");
 		return patientService.getPatient(id);
 	}
 	
