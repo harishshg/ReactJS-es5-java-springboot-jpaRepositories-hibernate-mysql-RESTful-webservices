@@ -1,5 +1,7 @@
 package com.restdemo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,8 +21,13 @@ public class PatientController {
 	@RequestMapping(value="/patient/{id}",method=RequestMethod.GET)
 	public Patient getPatient(@PathVariable long id){
 		
-		System.out.println("demo");
 		return patientService.getPatient(id);
+	}
+	
+	@RequestMapping(value="/patients",method=RequestMethod.GET)
+	public List<Patient> getPatients(){
+		
+		return patientService.getPatients();
 	}
 	
 	@RequestMapping(value="/patient",method=RequestMethod.POST)

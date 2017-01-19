@@ -13,7 +13,21 @@ public class Patient {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	long id;
 	String name;
+	int age;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	String desease;
 	
+	public String getDesease() {
+		return desease;
+	}
+	public void setDesease(String desease) {
+		this.desease = desease;
+	}
 	public long getId() {
 		return id;
 	}

@@ -1,5 +1,7 @@
 package com.restdemo.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,11 @@ public class PatientServiceImpl implements IPatientService{
 	public Patient save(Patient p) {
 		
 		return patientRepository.save(p);
+	}
+
+	@Override
+	public List<Patient> getPatients() {
+		return patientRepository.findAll();
 	}
 
 }
